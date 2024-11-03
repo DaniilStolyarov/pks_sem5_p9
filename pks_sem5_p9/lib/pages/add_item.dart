@@ -90,12 +90,12 @@ class AddItem extends StatelessWidget {
                       descriptionController.text);
                       final createdResponse = await http.post(Uri(scheme: "http", host: appData.serverHost, port: appData.serverPort, path: "/service"), body: jsonEncode(newItem.toJson()));
                       Map<String, dynamic> jsonResponse = jsonDecode(createdResponse.body);
-                      newItem.ID = int.parse(jsonResponse["ID"]); 
+                      newItem.ID = jsonResponse["ID"] as int; 
                       catalogState.addItem(newItem);
                   }
                   catch (err)
                   {
-
+                    rethrow;
                   }
                   Navigator.pop(context);
                 },

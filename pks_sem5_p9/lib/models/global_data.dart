@@ -62,5 +62,15 @@ class GlobalData
     }
     return -1;
   }
-  
+  int indexOfShopItem(int ID)
+  {
+    for (int i = 0; i < shopItems.length; i++)
+    {
+      if (shopItems[i].ID == ID)
+      {
+        return i;
+      }
+    }
+    return -1;
+  }
 }

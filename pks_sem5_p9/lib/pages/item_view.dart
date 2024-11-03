@@ -37,13 +37,13 @@ class ItemViewState extends State<ItemView> {
                   ),
                   Text(
                     "Описание",
-                    style: TextStyle(fontSize: 28, fontWeight: FontWeight.w500),
+                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.w500),
                   ),
                   SizedBox(
                     height: 10,
                   ),
                   Text(widget.shopItem.Description,
-                      style: TextStyle(fontSize: 22)),
+                      style: TextStyle(fontSize: 18)),
                   SizedBox(
                     height: 220,
                   )
@@ -71,7 +71,7 @@ class ItemViewState extends State<ItemView> {
                           ? "Добавить в Избранное"
                           : "В Избранном",
                       style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 18,
                           fontWeight: FontWeight.w600,
                           color: Colors.white)),
                   onPressed: () async {
@@ -117,7 +117,7 @@ class ItemViewState extends State<ItemView> {
                           ? "Записано - ${widget.shopItem.PriceRubles} руб."
                           : "Записаться - ${widget.shopItem.PriceRubles} руб.",
                       style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 18,
                           fontWeight: FontWeight.w600,
                           color: Colors.white)),
                   onPressed: () async {
